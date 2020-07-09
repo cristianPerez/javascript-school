@@ -1,0 +1,200 @@
+Javascript
+  => es un leguaje levemente tipado.
+
+funciones:
+Conjunto de sentencias, que retornan algo.
+
+Funciones declarativas:
+Se utiliza la palabre clave llamada
+  => "function"
+  => Usualmente despues de la palabra va
+  => el nombre de la funcion.
+
+Funciones de expresion:
+Se utiliza cuando almacenamos dentro de una
+  => variable una nueva funcion.
+  => Tambien conocidas como anonimas.
+
+Templete string:
+Plantilla de cadena de texto, voy a poder
+  => poner strings como variales.
+  => sirve para concatenar strings con
+  => Variables.
+
+utilizmos la palara reservada return para
+  => obtener resultados.
+
+Diferencia:
+Las declarativas pueden ser llamadas
+  => antes de ser declaradas.
+Las de expresion no, se deben declarar
+  => y luego se pueden llamar.
+
+_________________________________________
+
+Scope:
+Es el alcance que tienen la variables.
+hay dos tipos de scope, el gloal y el local.
+
+Dentro de las funciones se crea un scope
+  => local, tambien puedo acceder a las
+  => variables de gloal.
+
+Todo los que este declarado en global,
+  => se puede acceder desde el local,
+  => pero lo local no se puede llamar
+  => desde local.
+
+_________________________________________
+
+
+Hoisting:
+Cuando las variables y las funciones se
+  => procesan antes que se ejecute cualquier
+  => tipo de codigo.
+
+Solo sucede con versiones anteriores a
+  => ecmascript 5, por que sucede con 
+  => las palabras reservadas var y function.
+
+Si utilzzamos una variable antes de declararla
+  => se genera un hoisting.
+
+Hoisting con variables dentro de funciones.
+
+_________________________________________
+
+Cohersion:
+forma en que podemos cambiar un tipo de
+  => valor a otro tipo de valor.
+
+Cohersion implicita:
+Cuando esto se hace automatico:
+  => 4 + "7" = "47"
+  => 4 * "7" = 28
+
+Cohersion explicita:
+Forma en la que oligamos que un valor de
+  => un tipo cambie a otro.
+  => var a = Sting(20);
+  => Obligo con un casting.
+
+_________________________________________
+
+Truthy and Falsy
+Hay varios tipos de valores que son falsos
+  => Boolean(0) -> False
+  => Boolean(null) -> False
+  => Boolean(undefined) -> False
+  => Boolean(NaN) -> False
+  => Boolean(false) -> False
+  => Boolean("") -> False
+
+Lista de verdaderos
+ => Boolean(1) -> True
+ => Boolean("a") -> True
+ => Boolean([]) -> True
+ => Boolean({}) -> True
+ => Boolean(function(){}) -> True
+ => Boolean(true) -> True
+
+ Arrays:
+ Podemos usar diferentes operaciones
+   => push("elemento") pone en [length]
+   => pop() quita en [length]
+   => unshift() poner en [0]
+   => shift() quitar de [0]
+   => indexOf("Pera") Busca un elemento y
+   => retorna la posicion en el array.
+
+
+Ciclos:
+For:
+for(var i = 0; i < estudiantes.length; i++)
+for(var estudiante of estudiantes)
+
+Objetos:
+Como llevar un objeto del mundo fisico
+al paradigma de objetos en JS.
+  => var miAuto = {
+    marca: 'Toyota',
+    modelo: 'Corolla',
+    año: 2020,
+    detalleDelAuto: function () {
+    console.log(`Auto ${this.modelo} - ${this.año}`)
+}
+${this} hace referencia al mismo objeto
+
+Function constructora de objetos:
+
+function car(brand, model, year) {
+  this.brand = brand;
+  this.model = model;
+  this.year = year;
+}
+
+var cars = [];
+
+for(var i=1; i<=30; i++) {
+  var carStub = new car(`brand${i}`, `model${i}`, 2000 + i);
+  console.log(carStub);
+  cars.push(carStub);
+}
+
+console.log(cars.length);
+console.log(cars);
+
+
+Recorridos en arrays:
+Map o filter no modifican el arreglo original.
+var articulos = [
+  { nombre: "Bici", costo: 3000 },
+  { nombre: "Tv", costo: 2500 },
+  { nombre: "Libro", costo: 320 },
+  { nombre: "Celular", costo: 10000 },
+  { nombre: "Laptop", costo: 20000 },
+  { nombre: "Teclado", costo: 500 },
+  { nombre: "Audifonos", costo: 1700 }
+]
+
+var articulosFiltrados = articulos.filter(
+  function(articulo){
+    return articulo.costo >= 10000;
+  }
+)
+
+var articulosMapeados = articulos.map(
+  function(articulo) {
+    return articulo.nombre;
+  }
+)
+
+Find: Aclaracion no returna un array Solo
+  => retorna el primer elemento del arrays
+  => que cumpla la condición.
+
+var encuentraArticulo = articulos.find(
+  function(articulo) {
+    return articulo.nombre === "Laptop";
+  }
+)
+
+forEach:
+Recorre el array, puede remplazar el for
+  => básico.
+articulos.forEach(
+  function(articulo) {
+    console.log(articulo.nombre);
+  }
+)
+
+
+some: Regresa verdadero o falso para los
+ => articulos que cumplan la condición.
+ => se obtiene muy un true o false.
+articulos.some(
+  function(articulo) {
+    return articulo.costo <= 700;
+  }
+)
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>TopBar</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="Logo platzi">
+    </header>
+    <section class="login">
+      <section class="login__container">
+        <h2>Inicia sesión</h2>
+        <form class="login__container--form">
+          <input class="input" type="text" placeholder="Correo" />
+          <input class="input" type="password" placeholder="Contraseña" />
+          <button class="button">Iniciar sesión</button>
+          <div class="login__container--remember-me">
+            <label>
+              <input type="checkbox" name="" id="cbox1" value="checkbox">Recuerdame</input>
+            </label>
+            <a href="/">Olvide mi contraseña</a>
+          </div>
+        </form>
+        <section class="login__container--social-media">
+          <div><img src="./img/ic_google.png"  alt="Google"/> Inicia sesioón con Google</div>
+          <div><img src="./img//ic_twitter.png"  alt="Twitter"/> Inicia sesioón con Twitter</div>
+        </section>
+        <p class="login__container--register">No tienes ninguna cuenta <a href="/">registrate</a></p>
+      </section>
+    </section>
+    <footer class="footer">
+      <a href="/">Términos de uso</a>
+      <a href="/">Declaración de privacidad</a>
+      <a href="/">Centro de ayuda</a>
+    </footer>
+  </body>
+</html>

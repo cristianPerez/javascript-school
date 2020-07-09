@@ -1,0 +1,48 @@
+Usar comillas simple
+No es obligatorio escribir el ; al final.
+
+js> var nombre = 'Cristian'
+js> console.log('Hola' + nombre)
+
+Podemos declarar dos variables en linea misma
+  => linea.
+js> var nombre = 'Cristian', apellido = 'Perez'
+
+Las variables, son debilmente tipadas en js.
+  => js es un lenguaje debilmente tipado.
+
+js> var edad = 30
+js> edad = '30 años'
+js> console.log(edad)
+js> 30 años
+
+______________________________________________
+
+js> var nombre = 'Cristian', apellido = 'Perez'
+
+Funciones para poner todo el string en
+  => mayuscula o minuscula.
+js> var nombreEnMayusculas = nombre.toUpperCase()
+js> var apellidoEnMayusculas = apellido.toLowerCase()
+
+Funciones para obtener el primer caracter de
+  => una palabra.
+js> var primeraLetraDelNombre = nombre.charAt(0)
+
+Funcion para identificar la cantidad de letras
+  => de un string.
+js> cantidadDeLetrasDelNombre = nombre.length
+
+Concatenar dos strings
+js> var nombreCompleto = nombre + ' ' + apellido
+
+Interpolación de texto, usamos un caracter
+  => especial para poder interpolar variables.
+  => Se maneja la comilla invertida "``"
+js> var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`
+
+Obtener posiciones especificas de un string.
+En este caso tomamos del nombre desde la
+  => posicion 1 y nos movemos 2 casillas.
+js> var str = nombre.substr(1,2)
+js> ri
